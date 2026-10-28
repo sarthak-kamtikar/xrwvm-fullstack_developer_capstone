@@ -2,9 +2,11 @@ import json
 import logging
 
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.models import User
+from .models import CarMake, CarModel
+from .populate import initiate
 
 logger = logging.getLogger(__name__)
 
@@ -68,3 +70,19 @@ def registration(request):
             {"status": "error", "message": "Invalid registration data"},
             status=400,
         )
+
+
+def get_cars(request):
+    if not CarMake.objects.exists():
+        initiate()
+
+    car_models = CarModel.objects.select_related("car_make")
+    cars = [
+        {
+            "CarModel": car_model.name,
+            "CarMake": car_model.car_make.name,
+        }
+        for car_model in car_models
+    ]
+
+    return JsonResponse({"CarModels": cars})

@@ -1,68 +1,143 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Link the style sheet here -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | Best Cars Dealerships</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+
+    .about-header {
+      padding: 2rem;
+      text-align: center;
+      background-color: #e9f7f7;
+    }
+
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1.5rem;
+    }
+
+    .team-card {
+      width: 18rem;
+      text-align: center;
+    }
+
+    .team-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+  </style>
 </head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light"
+       style="background-color: darkturquoise; min-height: 1in;">
     <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="/">
+        <strong>Dealerships</strong>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarText" aria-controls="navbarText"
+              aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+            <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
+            <a class="nav-link active" aria-current="page" href="/about/">
+              About Us
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
+            <a class="nav-link" href="/contact/">Contact Us</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-      <!-- Insert header information here -->
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
-        </div>
+
+  <main class="container my-4">
+    <section class="card">
+      <div class="about-header" id="about-header">
+        <h1>About Us</h1>
+        <p class="mb-0">
+          Welcome to Best Cars Dealerships, your guide to trusted dealerships
+          across North America. We help drivers find local branches and learn
+          from the experiences of other customers.
+        </p>
       </div>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
-        </div>
-      </div>
+      <div class="team">
+        <article class="card team-card">
+          <img
+            src="https://randomuser.me/api/portraits/women/44.jpg"
+            class="card-img-top"
+            alt="Portrait of Jordan Miles">
+          <div class="card-body">
+            <h2 class="h5">Jordan Miles</h2>
+            <p class="text-muted">Customer Experience Director</p>
+            <p class="card-text">
+              Jordan works with our dealership partners to make every customer
+              interaction helpful, clear, and welcoming.
+            </p>
+            <a href="mailto:jordan.miles@bestcars-dealership.com">
+              jordan.miles@bestcars-dealership.com
+            </a>
+          </div>
+        </article>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
-    
-</div>
+        <article class="card team-card">
+          <img
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            class="card-img-top"
+            alt="Portrait of Alex Chen">
+          <div class="card-body">
+            <h2 class="h5">Alex Chen</h2>
+            <p class="text-muted">Dealership Partnerships Manager</p>
+            <p class="card-text">
+              Alex helps local branches share accurate information and build
+              stronger relationships with drivers in their communities.
+            </p>
+            <a href="mailto:alex.chen@bestcars-dealership.com">
+              alex.chen@bestcars-dealership.com
+            </a>
+          </div>
+        </article>
 
+        <article class="card team-card">
+          <img
+            src="https://randomuser.me/api/portraits/women/68.jpg"
+            class="card-img-top"
+            alt="Portrait of Taylor Brooks">
+          <div class="card-body">
+            <h2 class="h5">Taylor Brooks</h2>
+            <p class="text-muted">Community Reviews Lead</p>
+            <p class="card-text">
+              Taylor supports our customer review program and makes it easier
+              for drivers to share honest feedback about their experiences.
+            </p>
+            <a href="mailto:taylor.brooks@bestcars-dealership.com">
+              taylor.brooks@bestcars-dealership.com
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
 </html>
